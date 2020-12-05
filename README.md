@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app uses iTunes search api and shows the list of songs and libraries.It is made using React and Redux Saga.
 
 ## Available Scripts
 
