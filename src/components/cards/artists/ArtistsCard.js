@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./ArtistsCard.css";
 import moment from "moment";
+import PropTypes from "prop-types";
 
 class ArtistsCard extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class ArtistsCard extends Component {
     );
 
     return (
-      <div className="artists-card">
+      <div className="artists-card" data-test="ArtistCard">
         <div className="artists-holder">
           <div className="poster-holder">
             <div
@@ -84,5 +85,16 @@ class ArtistsCard extends Component {
     );
   }
 }
+
+ArtistsCard.propTypes = {
+  data: PropTypes.shape({
+    artworkUrl100: PropTypes.string,
+    previewUrl: PropTypes.string,
+    collectionName: PropTypes.string,
+    shortDescription: PropTypes.string,
+    longDescription: PropTypes.string,
+    artistName: PropTypes.string,
+  }),
+};
 
 export default ArtistsCard;

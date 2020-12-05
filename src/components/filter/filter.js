@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./filter.css";
 import ArtistsCard from "../cards/artists/ArtistsCard";
+import PropTypes from "prop-types";
 
 class Filter extends Component {
   constructor(props) {
@@ -16,8 +17,8 @@ class Filter extends Component {
     return (
       <div className="filter">
         <div className="Artists-holder">
-          {this.props.data.data
-            ? this.props.data.data.data.map((item, index) => {
+          {this.props.data
+            ? this.props.data.data.map((item, index) => {
                 return <ArtistsCard key={index} data={item} />;
               })
             : null}
@@ -26,5 +27,9 @@ class Filter extends Component {
     );
   }
 }
-
+Filter.propTypes = {
+  data: PropTypes.shape({
+    data: PropTypes.array,
+  }),
+};
 export default Filter;
