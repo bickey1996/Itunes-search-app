@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This app uses iTunes search api and shows the list of songs and libraries.It is made using React and Redux Saga.
+Live URL - https://5fcb959dc8d7e364e8d7163c--mystifying-yonath-6e9326.netlify.app/
 
 ## Available Scripts
 
